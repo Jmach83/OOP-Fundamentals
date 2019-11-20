@@ -45,21 +45,6 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; }
 
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
         public bool Validate()
         {
             bool isValid = true;
