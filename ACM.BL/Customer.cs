@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         public Customer() : this(0)
         {
@@ -50,8 +50,9 @@ namespace ACM.BL
         }
 
         public static int InstanceCount { get; set; }
+        public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 

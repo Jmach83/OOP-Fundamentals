@@ -37,6 +37,7 @@ namespace ACM.BL
         public decimal? CurrentPrice { get; set; }
 
         public override string ToString() => ProductName;
+        public string Log() => $"{ProductId}: {ProductName} Status: {EntityState.ToString()}";
 
         public override bool Validate()
         {

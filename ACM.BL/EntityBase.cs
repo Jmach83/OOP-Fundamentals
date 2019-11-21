@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public enum EntityState
+    public enum EntityStateOption
     {
         Active,
         Deleted
@@ -14,6 +14,7 @@ namespace ACM.BL
 
     public abstract class EntityBase
     {
+        public EntityStateOption EntityState { get; set; }
         public bool HasChanges  { get; set; }
         public bool IsNew { get; private set; }
         public bool IsValid => Validate();
