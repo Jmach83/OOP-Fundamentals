@@ -23,6 +23,8 @@ namespace ACM.BL
         public int CustomerId { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
+        private string _lastName;
+
         public string FullName { 
             get 
             {
@@ -38,7 +40,8 @@ namespace ACM.BL
                 return fullName;
             } 
         }
-        private string _lastName;
+
+        public override string ToString() => FullName;
 
         public string LastName
         {
